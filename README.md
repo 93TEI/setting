@@ -10,6 +10,10 @@
 
 ## IntelliJ에서 GitLab 연동시키는 방법
     vcs - git - remote - GitLab project의 https URL로 추가
+## Github 원격저장소 꼬이지 않게 연동하는 법
+    깃허브에서 레포지토리 생성 후 springboot controller정도 만들고
+    share project로 연동
+    그 후 리액트 설치 -> 리액트 폴더들 깃허브에 푸시
     
 ## 프로젝트 생성 시
     README.md를 꼭 생성할 
