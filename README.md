@@ -29,3 +29,9 @@
     *실행은 서버와 리액트 둘 다 실행 해야한다
     https://7942yongdae.tistory.com/136
     
+## Github 연동 관련 
+    IntelliJ에서 GitLab 연동시키는 방법
+    vcs - git - remote - GitLab project의 https URL로 추가
+    
+    원격저장소 변경
+    git remote set-url origin <새로운GITURL>
