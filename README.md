@@ -35,3 +35,11 @@
     
     원격저장소 변경
     git remote set-url origin <새로운GITURL>
+    
+    원격 저장소 변경 오류 시
+    git init
+    git branch -m main
+    git remote add origin "github.com/your_ropo.git"
+    git add .
+    git commit -m "first commit"
+    git push -u origin main
