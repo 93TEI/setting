@@ -44,7 +44,7 @@
     git commit -m "first commit"
     git push -u origin main
 
-## Jwt 관련 참고 사이트
+## Security 및 네트워크 관련 참고 사이트
     전반적인 Spring Security 예제 및 각각의 설명 :
     https://kimchanjung.github.io/programming/2020/07/02/spring-security-02/
     전반적인 JWT 흐름 및 예제 코드 : 
