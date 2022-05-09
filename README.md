@@ -43,6 +43,11 @@
     git add .
     git commit -m "first commit"
     git push -u origin main
+    
+    강제pull (브랜치 중요)
+    git fetch --all
+    git reset --hard origin/master
+    git pull origin master
 
 ## Security 및 네트워크 관련 참고 사이트
     전반적인 Spring Security 예제 및 각각의 설명 :
