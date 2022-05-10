@@ -57,3 +57,7 @@
     CORS : 
     https://url.kr/lw3i7s (내가 url 줄여놨음)
     
+## Docker & k8s
+    docker-> k8s -> 터미널에서 kubectl proxy
+    http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+    토큰 생성 후 로그인
