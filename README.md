@@ -60,4 +60,34 @@
 ## Docker & k8s
     docker-> k8s -> 터미널에서 kubectl proxy
     http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
-    토큰 생성 후 로그인
+    토큰 생성 후 로그인 : 대시보드 접속
+    
+    1. docker desktop 실행 + k8s 실행
+    2. 터미널로 'kubectl proxy' 입력하여 k8s 대시보드 접속
+    3. spring boot에서 Dockerfile 작성 (파일 포맷이 도커파일이 안떠도 됨. 이따 변경됨)
+    4. spring boot 터미널에서 루트에서 './gradlew clean build' 로 jar파일 만들어짐(실제 폴더의 파일경로에서 확인해보기)
+    5. spring boot 터미널에서 'docker build -t 도커ID/레파지토리이름 .' (ex. teistro/toyp)
+    6. Docker images로 확인하거나 Docker desktop에서 빌드 확인 가능
+    7. 지금까진 빌드, 이제 배포할 차례
+        'docker push teistro/toyp' -> doeckerhun에 push됨
+    8. k8s에 배포하기
+    spring boot 터미널에서 다음과 같이 세 줄을 입력
+        kubectl create deployment 레포지토리이름 --image=teistro/레파지토리이름 --dry-run=client -o=yaml > deployment.yaml
+        echo --- >> deployment.yaml
+        kubectl create service clusterip 레포지토리 --tcp=8080:8080 --dry-run=client -o=yaml >> deployment.yaml
+    입력 후 root에 deployment.yaml 생성됨
+    9. k8s 배포
+        kubectl apply -f deployment.yaml
+    10. 정상적으로 배포됐는지 확인
+        kubectl get all | grep 레포지토리이름
+        
+        
+## mysql
+    mac에서 homebrew 사용
+    1. brew update
+    2. brew search mysql
+    3. brew services start mysql
+    4. mysql -u root -p
+    
+    Spring boot에 연동 시
+        의존성 주입(gradle, pom.xml) -> application파일에 써줘야함
