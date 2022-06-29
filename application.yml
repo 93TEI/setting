@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver # 의존성 추가해줘야 오류 없음
+    url: jdbc:mysql://localhost:3306/testDB
+    username: root
+    password: 비밀번호
+
+# mybatis 매퍼 위치 알려줘야 연결됨
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
