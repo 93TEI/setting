@@ -29,7 +29,7 @@
     *실행은 서버와 리액트 둘 다 실행 해야한다
     https://7942yongdae.tistory.com/136
     
-## Github 연동 관련 
+## GitLab 연동 관련 
     IntelliJ에서 GitLab 연동시키는 방법
     vcs - git - remote - GitLab project의 https URL로 추가
     
@@ -43,6 +43,11 @@
     git add .
     git commit -m "first commit"
     git push -u origin main
+    
+    원격저장소 변경 시 push 거부 시
+    - GitLab Project -> Settings -> 저장소 -> Protected Branches -> Protected Branches  
+    리스트에 우측 UnProtected를 클릭 혹은Allowed to merge   Allowed to push 에서 권한 설정
+    git push -f origin main
     
     강제pull (브랜치 중요)
     git fetch --all
