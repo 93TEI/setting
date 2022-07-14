@@ -96,3 +96,22 @@
     
     Spring boot에 연동 시
         의존성 주입(gradle, pom.xml) -> application파일에 써줘야함
+        
+## mariadb 연동 (mysql을 지워줘야함)
+    brew services stop mysql
+    
+    brew unlink mysql
+    brew remove mysql
+    brew uninstall mysql
+    brew cleanup
+    
+    sudo rm -rf /usr/local/var/mysql
+    sudo rm -rf /usr/local/bin/mysql*
+    sudo rm -rf /usr/local/Cellar/mysql --/mariadb
+    sudo rm -rf /usr/local/var/homebrew/{mac-user}/mariadb
+    sudo rm -rf /usr/local/etc/my.cnf --설정파일
+    sudo rm -rf /usr/local/etc/my.cnf.d --설정파일
+    
+    sudo mysql -u root -p
+    use mysql
+    alter user root@localhost identified by '1234'; // 비번 1234
