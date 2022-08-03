@@ -115,3 +115,10 @@
     sudo mysql -u root -p
     use mysql
     alter user root@localhost identified by '1234'; // 비번 1234
+
+## mongodb
+    로그인 방법
+        mongosh
+        use admin
+        db.auth('설정한이름')
+        패스워드 입력
